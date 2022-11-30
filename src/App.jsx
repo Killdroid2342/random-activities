@@ -1,11 +1,11 @@
 import react from 'react';
-import RandomFacts from './RandomFacts/RandomFacts';
+import RandomActivities from './RandomActivities/RandomActivities';
 
 function App() {
   document.title = 'Random Facts';
   return (
     <div className='App'>
-      <RandomFacts />
+      <RandomActivities />
     </div>
   );
 }
