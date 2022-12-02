@@ -3,7 +3,18 @@ import React, { useState } from 'react';
 
 const RandomActivities = () => {
   const [activites, setActivites] = useState('');
+  const getRandomActivity = async () => {
+    axios
+      .get('https://www.boredapi.com/api/activity%27')
+      .then((res) => {
+        console.log(res);
 
+        // setActivites(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className='flex flex-col items-center justify-center text-center'>
       <h1 className='text-2xl font-serif font-bold mt-36'>
@@ -13,7 +24,10 @@ const RandomActivities = () => {
         <p className='border-2 border-white font-serif p-2 font-bold'>
           {activites}dummy text
         </p>
-        <button className='border-2 border-white p-3 rounded-lg mt-10 font-bold font-serif'>
+        <button
+          className='border-2 border-white p-3 rounded-lg mt-10 font-bold font-serif'
+          onClick={getRandomActivity}
+        >
           Click For Activities
         </button>
       </div>
