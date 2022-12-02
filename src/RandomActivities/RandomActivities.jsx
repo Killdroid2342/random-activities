@@ -5,7 +5,7 @@ const RandomActivities = () => {
   const [activites, setActivites] = useState('');
   const getRandomActivity = async () => {
     axios
-      .get('https://www.boredapi.com/api/activity%27')
+      .get('https://www.boredapi.com/api/activity')
       .then((res) => {
         console.log(res);
 
