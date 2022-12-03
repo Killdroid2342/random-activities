@@ -19,14 +19,14 @@ const RandomActivities = () => {
         Want A New Activity?
       </h1>
       <div className='border-2 border-white rounded-md p-10 mt-44'>
-        <p className='border-2 border-white font-serif p-2 font-bold'>
+        <p className='border-2 border-white font-serif p-4 font-bold'>
           {activites}
         </p>
         <button
           className='border-2 border-white p-3 rounded-lg mt-10 font-bold font-serif'
           onClick={getRandomActivity}
         >
-          Click For Activities
+          Click Me For Activities
         </button>
       </div>
     </div>
