@@ -2,14 +2,12 @@ import axios from 'axios';
 import React, { useState } from 'react';
 
 const RandomActivities = () => {
-  const [activites, setActivites] = useState('');
+  const [activites, setActivites] = useState('Click Button For Activity');
   const getRandomActivity = async () => {
     axios
       .get('https://www.boredapi.com/api/activity')
       .then((res) => {
-        console.log(res);
-
-        // setActivites(res.data.data);
+        setActivites(res.data.activity);
       })
       .catch((err) => {
         console.log(err);
@@ -22,7 +20,7 @@ const RandomActivities = () => {
       </h1>
       <div className='border-2 border-white rounded-md p-10 mt-44'>
         <p className='border-2 border-white font-serif p-2 font-bold'>
-          {activites}dummy text
+          {activites}
         </p>
         <button
           className='border-2 border-white p-3 rounded-lg mt-10 font-bold font-serif'
